@@ -7,6 +7,8 @@ import {CartComponent} from "./components/cart/cart.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {ProductComponent} from "./components/product/product.component";
 import {ThankyouComponent} from "./components/thankyou/thankyou.component";
+import { ContactComponent } from './components/contact/contact.component';
+import { DashuserComponent } from './components/dashuser/dashuser.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,9 @@ const routes: Routes = [
   
   {
     path: 'login', component: LoginComponent
+  },
+  {
+    path: 'myaccount', component: DashuserComponent
   },
   {
     path: 'register', component: RegisterComponent
@@ -31,6 +36,9 @@ const routes: Routes = [
   },
   {
     path: 'thankyou', component: ThankyouComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
   }
 ];
 

@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 
 
 export class HomeComponent implements OnInit {
-  products: ProductModelServer[] = [];
+  public products: any = [];
 
   constructor(private productService: ProductService,
               private cartService: CartService,
@@ -23,7 +23,12 @@ export class HomeComponent implements OnInit {
     this.productService.getAllProducts(8).subscribe((prods: serverResponse ) => {
       this.products = prods.products;
       console.log(this.products);
+      
     });
+    this.productService.all().subscribe(
+      res => this.products =res
+    );
+    console.log(this.products);
   }
 
   AddProduct(id: Number) {

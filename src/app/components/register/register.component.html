@@ -1,0 +1,93 @@
+<body>
+	
+	
+	
+	
+
+	<div class="container-fluid p-0">
+	    <div class="row no-gutters row-height">
+	        <div class="col-lg-6 background-image">
+            
+                
+	            
+	        </div>
+	        <div class="col-lg-6 d-flex flex-column content-right">
+	            <div class="container my-auto py-5">
+	                <div class="row">
+	                    <div class="col-lg-9 col-xl-7 mx-auto">
+	                        <h4 class="mb-3">Sign Up</h4>
+	                        <form class="input_style_1" [formGroup]='registerForm' (ngSubmit)="signupUser()">
+	                        	
+								<!-- Leave for security protection, read docs for details -->
+								<div class="form-group">
+	                                <label for="full_name">Name</label>
+	                                <input type="text" formControlName="username" id="full_name" class="form-control" required>
+	                            </div>
+								<div class="form-group">
+	                                <label for="full_name">Email</label>
+	                                <input type="text" formControlName="email" id="full_name" class="form-control" required>
+	                            </div>
+								<div class="form-group">
+	                                <label for="full_name">Adresse</label>
+	                                <input type="text" formControlName="adresse" id="full_name" class="form-control" required>
+	                            </div>
+	                            
+								<div class="form-group">
+	                                <label for="email_address">Tel .</label>
+	                                <input type="email" formControlName="tel" id="email_address" class="form-control" required>
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="password1">Password</label>
+	                                <input type="password" formControlName="password" id="password1" class="form-control">
+	                            </div>
+								<div class="form-group">
+	                                <label for="password1">Confirme Password</label>
+	                                <input type="password" formControlName="confirmedPasssword" id="password1" class="form-control">
+	                            </div>
+	                            
+	                            <div id="pass-info" class="clearfix"></div>
+	                                <div class="mb-4 terms">
+	                                    <label class="container_check">I agree to the <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and Privacy Policy</a>.
+	                                        <input type="checkbox" name="agree" id="agree" value="Yes" required>
+	                                        <span class="checkmark"></span>
+	                                    </label>
+	                                </div>
+	                            <button type="submit" class="btn_1 full-width submit">Sign Up</button>
+	                        </form>
+	                        <p class="text-center mt-3 mb-0">Already have an account? <a [routerLink]="['/auth']" routerLinkActive="router-link-active">Sign In</a></p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="container pb-3 copy">© 2021 Betler - All Rights Reserved.</div>
+	        </div>
+	    </div>
+	    <!-- /row -->
+	</div>
+	<!-- /container -->
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+    
+
+	<!-- SPECIFIC SCRIPTS -->
+	
+
+</body>

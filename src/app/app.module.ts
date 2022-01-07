@@ -17,6 +17,9 @@ import {NgxSpinnerModule} from "ngx-spinner";
 import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ToastrModule} from 'ngx-toastr';
+import { ContactComponent } from './components/contact/contact.component';
+import { DashuserComponent } from './components/dashuser/dashuser.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import {ToastrModule} from 'ngx-toastr';
     CartComponent,
     CheckoutComponent,
     ProductComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    ContactComponent,
+    DashuserComponent,
+    
   ],
   imports: [
     BrowserModule,

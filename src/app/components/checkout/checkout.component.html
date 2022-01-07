@@ -16,33 +16,34 @@
 
     <div class="col-md-7">
       <!-- Billing Details -->
+     <form [formGroup]='registerForm' (ngSubmit)="onCheckout()">
       <div class="billing-details">
         <div class="section-title">
           <h3 class="title">Billing address</h3>
         </div>
         <div class="form-group">
-          <input class="input" type="text" name="first-name" placeholder="First Name">
+          <input class="input" type="text" formControlName="firstname" placeholder="First Name">
         </div>
         <div class="form-group">
-          <input class="input" type="text" name="last-name" placeholder="Last Name">
+          <input class="input" type="text" formControlName="lastname" placeholder="Last Name">
         </div>
         <div class="form-group">
-          <input class="input" type="email" name="email" placeholder="Email">
+          <input class="input" type="email" formControlName="email" placeholder="Email">
         </div>
         <div class="form-group">
-          <input class="input" type="text" name="address" placeholder="Address">
+          <input class="input" type="text" formControlName="address" placeholder="Address">
         </div>
         <div class="form-group">
-          <input class="input" type="text" name="city" placeholder="City">
+          <input class="input" type="text" formControlName="city" placeholder="City">
         </div>
         <div class="form-group">
-          <input class="input" type="text" name="country" placeholder="Country">
+          <input class="input" type="text" formControlName="country" placeholder="Country">
         </div>
         <div class="form-group">
-          <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+          <input class="input" type="text" formControlName="zipcode" placeholder="ZIP Code">
         </div>
         <div class="form-group">
-          <input class="input" type="tel" name="tel" placeholder="Telephone">
+          <input class="input" type="tel" formControlName="phone" placeholder="Telephone">
         </div>
         <div class="form-group">
           <div class="input-checkbox">
@@ -58,6 +59,8 @@
           </div>
         </div>
       </div>
+      </form>
+    <!--</form>-->
       <!-- /Billing Details -->
 
       <!-- Shiping Details -->
@@ -172,8 +175,10 @@
           I've read and accept the <a href="#">terms & conditions</a>
         </label>
       </div>
-      <button type="submit" class="btn-outline-danger btn-sm my-2 btn-block" [disabled]="cartTotal <= 0 " (click)="onCheckout()">Place order</button>
+      
+    <button type="submit" class="btn-outline-danger btn-sm my-2 btn-block" [disabled]="cartTotal <= 0 " (click)="onCheckout()">Place order</button>
     </div>
+
     <!-- /Order Details -->
   </div>
   <!-- /row -->
